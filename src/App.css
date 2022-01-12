@@ -20,7 +20,7 @@ body {
   border: none;
   background-color: white;
   border-radius: 2px;
-  padding: 0.5vh;
+  padding: 0.5vh 1vh 0.5vh 1vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-transform: uppercase;
   color: black;

@@ -2,11 +2,26 @@ import React from 'react';
 import './TodoList.css';
 import TodoItem from '../components/TodoItem';
 
-export default function TodoList({ message, task, setTask, todos, handleSubmit, handleToggle }) {
+export default function TodoList({
+  message,
+  task,
+  setTask,
+  todos,
+  handleSubmit,
+  handleToggle,
+  handleDelete,
+}) {
   return (
     <div className="TodoList">
       {todos.map((todo) => {
-        return <TodoItem key={todo.task} todo={todo} handleToggle={handleToggle} />;
+        return (
+          <TodoItem
+            key={todo.task}
+            todo={todo}
+            handleToggle={handleToggle}
+            handleDelete={handleDelete}
+          />
+        );
       })}
       <input
         className="list-input"
