@@ -1,6 +1,17 @@
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: slategray;
+  justify-content: center;
+  background-color: cornflowerblue;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.todo-portal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
 }

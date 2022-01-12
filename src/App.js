@@ -19,12 +19,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             {currentUser && (
-              <>
+              <div className="todo-portal">
                 <Todo />
                 <button className="logout-button" onClick={logoutUser}>
                   Log Out
                 </button>
-              </>
+              </div>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
           </Route>
