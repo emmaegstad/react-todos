@@ -29,8 +29,8 @@ export default function Todo() {
 
   const handleDelete = async (todo) => {
     await deleteTask(todo.id);
-    const data = await fetchTodos();
-    setTodos(data);
+    const updatedTodos = todos.filter((task) => task.id !== todo.id);
+    setTodos(updatedTodos);
   };
 
   useEffect(() => {
