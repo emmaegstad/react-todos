@@ -10,7 +10,7 @@ export async function createToDo(task) {
   return checkError(resp);
 }
 
-export async function updateToDo(id, is_complete) {
+export async function toggleCompleted(id, is_complete) {
   const resp = await client.from('todos').update({ is_complete }).eq('id', id);
   return checkError(resp);
 }

@@ -1,7 +1,7 @@
 import './Todo.css';
 import React, { useState, useEffect } from 'react';
 import TodoList from '../components/TodoList';
-import { fetchTodos, createToDo } from '../services/todos';
+import { fetchTodos, createToDo, toggleCompleted } from '../services/todos';
 
 export default function Todo() {
   const [todos, setTodos] = useState([]);
@@ -12,10 +12,19 @@ export default function Todo() {
     try {
       const [resp] = await createToDo(task);
       setTodos((prevState) => [...prevState, resp]);
+      setTask('');
       setMessage('Task successfully added.');
     } catch {
       setMessage('Oops, please try again.');
     }
+  };
+
+  const handleToggle = async (todo) => {
+    await toggleCompleted(todo.id, !todo.is_complete);
+    const updatedTodos = todos.map((item) =>
+      item.id === todo.id ? { ...todo, is_complete: !todo.is_complete } : item
+    );
+    setTodos(updatedTodos);
   };
 
   useEffect(() => {
@@ -36,6 +45,7 @@ export default function Todo() {
         message={message}
         setMessage={setMessage}
         handleSubmit={handleSubmit}
+        handleToggle={handleToggle}
       />
     </div>
   );
