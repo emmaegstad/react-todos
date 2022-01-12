@@ -48,7 +48,7 @@ export default function AuthForm({
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <input className="form-button" type="submit" />
+        <input className="form-button button" type="submit" />
         <span className="error-msg">{errorMsg}</span>
       </form>
     </div>

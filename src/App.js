@@ -21,7 +21,7 @@ function App() {
             {currentUser && (
               <div className="todo-portal">
                 <Todo />
-                <button className="logout-button" onClick={logoutUser}>
+                <button className="logout-button button" onClick={logoutUser}>
                   Log Out
                 </button>
               </div>
