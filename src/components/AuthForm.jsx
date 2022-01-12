@@ -14,7 +14,7 @@ export default function AuthForm({
 }) {
   return (
     <div className="AuthForm">
-      <h1 className="todo-title">To Do List</h1>
+      <h1 className="auth-title">To Do List</h1>
       <header className="auth-header">
         <span
           className={classNames({ active: type === 'signin' })}
