@@ -1,0 +1,14 @@
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-input {
+  margin-top: 2vh;
+}
+
+.list-submit {
+  width: 8vh;
+  align-self: center;
+}
